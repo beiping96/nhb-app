@@ -2,10 +2,15 @@
 
 import 'dart:io';
 
-Future<void> runServer(String basePath) async {
-  print("Serving `web` on http://127.0.0.1:8082");
+Future<void> main() async {
+  final script = File(Platform.script.toFilePath());
+  await runServer(script.parent.path);
+}
 
-  final server = await HttpServer.bind('127.0.0.1', 8082);
+Future<void> runServer(String basePath) async {
+  print("Serving `web` on http://localhost:8080 , basePath: ${basePath}");
+
+  final server = await HttpServer.bind('localhost', 8080);
   await for (HttpRequest request in server) {
     handleRequest(basePath, request);
   }
@@ -36,11 +41,4 @@ Future<void> sendInternalError(HttpResponse response) async {
 Future<void> sendNotFound(HttpResponse response) async {
   response.statusCode = HttpStatus.notFound;
   await response.close();
-}
-
-Future<void> main() async {
-  // Compute base path for the request based on the location of the
-  // script, and then start the server.
-  final script = File(Platform.script.toFilePath());
-  await runServer(script.parent.path);
 }
