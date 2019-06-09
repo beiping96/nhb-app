@@ -2,7 +2,7 @@
 // Use of this source code is governed by a Apache license
 // that can be found in the LICENSE file.
 
-module https: //github.com/guanggu-coder/nhb-app/caddy
+module github.com/guanggu-coder/nhb-app/caddy
 
 go 1.12
 
