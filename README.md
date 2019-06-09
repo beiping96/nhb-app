@@ -9,8 +9,8 @@
 编译部署：
 
 1. make build
-2. go run server.go
-3. http://localhost:8081/build
+2. go run main.go
+3. http://localhost:2015
 
 ## 关于“新屋熊”
 

@@ -23,6 +23,10 @@ build:
 serve:
 	webdev serve
 
+
+caddy-server:
+	go run main.go
+
 clean:
 	-rm -rf ./.dart_tool
 	-rm .packages

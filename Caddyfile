@@ -1,0 +1,9 @@
+# Copyright 2016 <chaishushan{AT}gmail.com>. All rights reserved.
+# Use of this source code is governed by a GPL-style
+# license that can be found in the LICENSE file.
+
+0.0.0.0:2015 {
+	root ./build
+
+	log stderr
+}
