@@ -1,4 +1,4 @@
-# nhb-app: 新屋熊(New house bear)应用，光谷码农客户端，基于Flutter开发
+# 新屋熊(New house bear): 光谷码农客户端
 
 测试环境：
 
