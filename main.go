@@ -15,7 +15,7 @@ func main() {
 	go caddyMain()
 	go ginMain()
 
-	<-make(chan bool)
+	select {}
 }
 
 func caddyMain() {
